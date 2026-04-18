@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="bg" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FX Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">◈</span>
+          <span class="logo-text">FX Dashboard</span>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon">☀</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- CONVERTER -->
+      <section class="section converter-section">
+        <h2 class="section-title">Конвертор</h2>
+        <div class="converter-card card">
+          <div class="converter-row">
+            <div class="converter-field">
+              <label class="field-label">Сума</label>
+              <input
+                type="number"
+                id="converterAmount"
+                class="field-input"
+                placeholder="1.00"
+                value="1"
+                min="0"
+              />
+            </div>
+            <div class="converter-field">
+              <label class="field-label">От</label>
+              <select id="converterFrom" class="field-select">
+                <option value="USD">🇺🇸 USD</option>
+                <option value="EUR">🇪🇺 EUR</option>
+                <option value="GBP">🇬🇧 GBP</option>
+                <option value="BGN">🇧🇬 BGN</option>
+                <option value="JPY">🇯🇵 JPY</option>
+                <option value="CHF">🇨🇭 CHF</option>
+              </select>
+            </div>
+            <button class="swap-btn" id="swapBtn" aria-label="Swap currencies">
+              ⇄
+            </button>
+            <div class="converter-field">
+              <label class="field-label">Към</label>
+              <select id="converterTo" class="field-select">
+                <option value="EUR">🇪🇺 EUR</option>
+                <option value="USD">🇺🇸 USD</option>
+                <option value="GBP">🇬🇧 GBP</option>
+                <option value="BGN">🇧🇬 BGN</option>
+                <option value="JPY">🇯🇵 JPY</option>
+                <option value="CHF">🇨🇭 CHF</option>
+              </select>
+            </div>
+          </div>
+          <div class="converter-result">
+            <span class="result-label">Резултат</span>
+            <span class="result-value" id="converterResult">—</span>
+            <span class="result-rate" id="converterRate"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIVE RATES -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Курсове спрямо</h2>
+          <select id="baseSelect" class="base-select field-select">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="BGN">BGN</option>
+          </select>
+        </div>
+        <div class="rates-grid" id="ratesGrid">
+          <!-- JS рендерира картите тук -->
+          <div class="skeleton-card card"></div>
+          <div class="skeleton-card card"></div>
+          <div class="skeleton-card card"></div>
+          <div class="skeleton-card card"></div>
+          <div class="skeleton-card card"></div>
+          <div class="skeleton-card card"></div>
+        </div>
+      </section>
+
+      <!-- CHART -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">История</h2>
+          <div class="chart-controls">
+            <select id="chartFrom" class="field-select">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+            </select>
+            <span class="chart-sep">→</span>
+            <select id="chartTo" class="field-select">
+              <option value="EUR">EUR</option>
+              <option value="USD">USD</option>
+              <option value="BGN">BGN</option>
+            </select>
+            <div class="period-btns">
+              <button class="period-btn" data-days="7">7д</button>
+              <button class="period-btn active" data-days="30">30д</button>
+              <button class="period-btn" data-days="90">90д</button>
+            </div>
+          </div>
+        </div>
+        <div class="chart-card card">
+          <canvas id="rateChart"></canvas>
+        </div>
+      </section>
+
+      <!-- FAVOURITES -->
+      <section class="section">
+        <h2 class="section-title">Любими двойки</h2>
+        <div class="favourites-list" id="favouritesList">
+          <!-- JS рендерира тук -->
+        </div>
+        <p class="favourites-hint">Кликни ★ на курс за да го добавиш</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span
+        >Данните са от
+        <a href="https://exchangerate-api.com" target="_blank"
+          >ExchangeRate-API</a
+        >
+        &
+        <a href="https://frankfurter.app" target="_blank">Frankfurter</a></span
+      >
+    </footer>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
