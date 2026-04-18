@@ -39,10 +39,17 @@ const API_KEY = "your_api_key_here";
 
 ## Screenshots
 
-<img src="screenshots/dark-PC.png" width="600" alt="Dark theme - Desktop"/>
-<img src="screenshots/dark-Phone.png" width="280" alt="Dark theme - Mobile"/>
-<img src="screenshots/light-PC.png" width="600" alt="Light theme - Desktop"/>
-<img src="screenshots/light-Phone.png" width="280" alt="Light theme - Mobile"/>
+### Desktop
+
+| Dark                                                              | Light                                                               |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------- |
+| <img src="screenshots/dark-PC.png" width="480" alt="Dark theme"/> | <img src="screenshots/light-PC.png" width="480" alt="Light theme"/> |
+
+### Mobile
+
+| Dark                                                                        | Light                                                                         |
+| --------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| <img src="screenshots/dark-Phone.png" width="240" alt="Dark theme mobile"/> | <img src="screenshots/light-Phone.png" width="240" alt="Light theme mobile"/> |
 
 ## Project Structure
 
