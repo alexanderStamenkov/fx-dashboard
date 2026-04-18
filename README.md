@@ -37,10 +37,22 @@ const API_KEY = "your_api_key_here";
 
 4. Open `index.html` with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) or any local server
 
+## Screenshots
+
+![Dark theme](screenshots/dark-PC.png)
+![Dark theme mobile](screenshots/dark-Phone.png)
+![Light theme](screenshots/light-PC.png)
+![Light theme mobile](screenshots/light-Phone.png)
+
 ## Project Structure
 
 ```
 fx-dashboard/
+├── screenshots/
+│   ├── dark-PC.png
+│   ├── dark-Phone.png
+│   ├── light-PC.png
+│   └── light-Phone.png
 ├── index.html
 ├── style.css
 ├── script.js
