@@ -39,10 +39,10 @@ const API_KEY = "your_api_key_here";
 
 ## Screenshots
 
-![Dark theme](screenshots/dark-PC.png)
-![Dark theme mobile](screenshots/dark-Phone.png)
-![Light theme](screenshots/light-PC.png)
-![Light theme mobile](screenshots/light-Phone.png)
+<img src="screenshots/dark-PC.png" width="600" alt="Dark theme - Desktop"/>
+<img src="screenshots/dark-Phone.png" width="280" alt="Dark theme - Mobile"/>
+<img src="screenshots/light-PC.png" width="600" alt="Light theme - Desktop"/>
+<img src="screenshots/light-Phone.png" width="280" alt="Light theme - Mobile"/>
 
 ## Project Structure
 
